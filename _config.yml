@@ -50,14 +50,14 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "mandarnaik016@gmail.com"
-  # rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  # facebook: deanattali
   github: mandarnaik016
-  # twitter: daattali
-  # patreon: DeanAttali
   linkedin: mandarnaik016
   instagram: _mandar_naik_
   youtube: @thenaikpost
+    # twitter: daattali
+  # patreon: DeanAttali
+    # rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  # facebook: deanattali
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
