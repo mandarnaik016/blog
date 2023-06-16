@@ -1,8 +1,3 @@
-## Unreleased version
-
-- BREAKING CHANGE: Allow changing the order of the social network links that appear in the footer (#1152)
-- Fixed bug where hovering over search results showed the text "{desc}" (#1156) 
-
 ## v6.0.1 (2023-06-08)
 
 This version has been in the works for a few years. It includes several new features that were highly requested, numerous bug fixes, new documentation, and aggresively encourages migrating from the old Google Universal Analytics to the new Analytics 4.
