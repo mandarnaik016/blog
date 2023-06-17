@@ -3,6 +3,7 @@ layout: post
 title: Ultimate Guide To Block Ads
 subtitle: More Than You Can Ever Imagine!
 cover-img: /assets/img/adblock/thumb.jpg
+thumbnail-img: ""
 tags: [security]
 ---
 
@@ -25,7 +26,7 @@ They exactly work like depicted below
 Nothing rocket science over here they contains the rules to block and filter the webpage you are viewing. 
 
 ## How to Block Ads?
-
+  
 - To block ads at **host level**, I use Dan Pollock [filter list](http://someonewhocares.org/hosts/).
 	1. Copy the host entries from the website.
 	2. Paste the entries in the host file located at 
@@ -42,6 +43,8 @@ Nothing rocket science over here they contains the rules to block and filter the
 	2. Then Download their installer.
 	3. After installing, right-click on NextDNS icon in the Systray then open the Settings. Set your Configuration ID.
 	4. Right-click on NextDNS icon in the Systray, then click on Enable.
+
+![NextDNS Dashboard](/assets/img/adblock/nextdns-dashboard){: .mx-auto.d-block :}
   
 - To block ads at **browser level**, I use [uBlock Origin](https://ublockorigin.com/).
 	1. Add the extension to your browser.
