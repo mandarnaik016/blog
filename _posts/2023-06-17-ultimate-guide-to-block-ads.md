@@ -29,26 +29,41 @@ Nothing rocket science over here they contains the rules to block and filter the
 
 ## How to Block Ads?
 
+### Host Level
+
 {: .box-note}
 **Note:** Make sure to use notepad in administration mode.  
 
-1. To block ads at **host level**, I use Dan Pollock [filter list](http://someonewhocares.org/hosts/).
-	- Copy the host entries from the website.
-	- Paste the entries in the host file located at 
-		- For Windows 9x and ME place this file at `C:\Windows\hosts`
-		- For NT, Win2K and XP use `C:\windows\system32\drivers\etc\hosts` or `C:\winnt\system32\drivers\etc\hosts`
-		- For Windows 7 and Vista use `C:\windows\system32\drivers\etc\hosts` or `%systemroot%\system32\drivers\etc\hosts`
-		- For Windows 8 and Windows 10 use `C:\Windows\System32\drivers\etc\hosts`
-	* Final host file should look similar to below one. ![Host](/assets/img/adblock/host.png){: .mx-auto.d-block :}  
+To block ads at **Host Level**, I use Dan Pollock [filter list](http://someonewhocares.org/hosts/).
 
-2. To block ads at **OS level**, I use [NextDNS](https://nextdns.io/).
-	- Create a account and configure the filter list in the privacy tab.
-	- Then Download their installer.
-	- After installing, right-click on NextDNS icon in the Systray then open the Settings. Set your Configuration ID.
-	- Right-click on NextDNS icon in the Systray, then click on Enable. ![NextDNS Dashboard](/assets/img/adblock/nextdns-dashboard.png){: .mx-auto.d-block :}  
+- Copy the host entries from the website.
+- Paste the entries in the host file located at 
+	- For Windows 9x and ME place this file at `C:\Windows\hosts`
+	- For NT, Win2K and XP use `C:\windows\system32\drivers\etc\hosts` or `C:\winnt\system32\drivers\etc\hosts`
+	- For Windows 7 and Vista use `C:\windows\system32\drivers\etc\hosts` or `%systemroot%\system32\drivers\etc\hosts`
+	- For Windows 8 and Windows 10 use `C:\Windows\System32\drivers\etc\hosts`
+- Final host file should look similar to below one.
 
-3. To block ads at **browser level**, I use [uBlock Origin](https://ublockorigin.com/).
-	- Add the extension to your browser.
-	- Enable all the filter list present in uBlock Origin. ![uBlock Dashboard](/assets/img/adblock/ublock-dashboard.png){: .mx-auto.d-block :}
+![Host](/assets/img/adblock/host.png){: .mx-auto.d-block :}  
+
+### OS Level 
+
+To block ads at **OS level**, I use [NextDNS](https://nextdns.io/).
+
+- Create a account and configure the filter list in the privacy tab.
+- Then Download their installer.
+- After installing, right-click on NextDNS icon in the Systray then open the Settings. Set your Configuration ID.
+- Right-click on NextDNS icon in the Systray, then click on Enable.
+
+![NextDNS Dashboard](/assets/img/adblock/nextdns-dashboard.png){: .mx-auto.d-block :}  
+
+### Browser Level 
+
+To block ads at **Browser level**, I use [uBlock Origin](https://ublockorigin.com/).
+
+- Add the extension to your browser.
+- Enable all the filter list present in uBlock Origin.
+
+![uBlock Dashboard](/assets/img/adblock/ublock-dashboard.png){: .mx-auto.d-block :}
 
 Live a happy online life!
