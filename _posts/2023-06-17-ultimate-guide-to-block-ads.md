@@ -17,6 +17,8 @@ I am used to change my OS and browsers as the result the numbers of ads blocked 
 
 I agree with you that some of the sites on the internet survive on the money earned through ads but now a days most of the time ads are present to **track** us down.
 
+> Arguing that you don't care about the right to privacy because you have nothing to hide is no different than saying you don't care about free speech because you have nothing to say. - Edward Snowden 
+
 ## How Ad-blockers Work?
 
 They exactly work like depicted below
@@ -48,7 +50,5 @@ Nothing rocket science over here they contains the rules to block and filter the
 3. To block ads at **browser level**, I use [uBlock Origin](https://ublockorigin.com/).
 	- Add the extension to your browser.
 	- Enable all the filter list present in uBlock Origin. ![uBlock Dashboard](/assets/img/adblock/ublock-dashboard.png){: .mx-auto.d-block :}
-
-> Arguing that you don't care about the right to privacy because you have nothing to hide is no different than saying you don't care about free speech because you have nothing to say. - Edward Snowden 
 
 Live a happy online life!
