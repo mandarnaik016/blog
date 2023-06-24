@@ -2,7 +2,7 @@
 layout: post
 title: Ultimate Guide To Block Ads
 subtitle: More Than You Can Ever Imagine!
-cover-img: /assets/img/adblock/thumb.jpg
+cover-img: /assets/img/adblock/thumb.png
 thumbnail-img: ""
 tags: [security]
 ---
@@ -11,7 +11,7 @@ tags: [security]
 
 Have at look at below image (p.s: The numbers could have been more than you can ever imagine!).
 
-![Blocked Ads](/assets/img/adblock/blocked-ads-mobile.jpg){: .mx-auto.d-block :}
+![Blocked Ads](/assets/img/adblock/blocked-ads-mobile.png){: .mx-auto.d-block :}
 
 I am used to change my OS and browsers as the result the numbers of ads blocked is quite less.
 
@@ -23,7 +23,7 @@ I agree with you that some of the sites on the internet survive on the money ear
 
 They exactly work like depicted below
 
-![Cat Blocker](/assets/img/adblock/cat-blocker.jpeg){: .mx-auto.d-block :}
+![Cat Blocker](/assets/img/adblock/cat-blocker.png){: .mx-auto.d-block :}
 
 Nothing rocket science over here they contains the rules to block and filter the webpage you are viewing. 
 
