@@ -21,6 +21,7 @@ author: Mandar Naik
 
 navbar-links:
   About Me: "aboutme"
+  GPG Key: "gpg" 
   Resources:
     - The Naik Post: "https://thenaikpost.blogspot.com/"
     # - Learn markdown: "https://www.markdowntutorial.com/"
