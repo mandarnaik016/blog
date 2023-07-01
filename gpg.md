@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GPG Public Key
+title: GPG Key
 subtitle: Recipe For Nuclear Bomb?
 ---
 
