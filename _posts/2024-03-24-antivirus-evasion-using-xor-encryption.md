@@ -107,7 +107,7 @@ The compiled exe gets detected by 13 antivirus engines out of 40.
 ![before xor](../assets/img/evasion/xor/before-xor.png)
 
 {: .box-note}
-**Note:** Never upload your samples to virustotal, Use [AntiScan](https://antiscan.me/) or [KleenScan](https://www.kleenscan.com/index). 
+**NOTE:** Never upload your samples to Virustotal, Use [AntiScan](https://antiscan.me/) or [KleenScan](https://www.kleenscan.com/index). 
 
 ## Detection with XOR
 
