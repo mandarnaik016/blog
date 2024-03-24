@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Antivirus Evasion: XOR Encryption
+title: Antivirus Evasion - XOR Encryption
 subtitle: Is It Still Detectable?
 cover-img: /assets/img/evasion/xor/evasion-thumb.png
 thumbnail-img: ""
