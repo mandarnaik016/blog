@@ -4,7 +4,7 @@ title: Antivirus Evasion - XOR Encryption
 subtitle: Is It Still Detectable?
 cover-img: /assets/img/evasion/xor/evasion-thumb.png
 thumbnail-img: ""
-tags: [security]
+tags: [evasion, security]
 ---
 Hello Guys, In this tutorial, we will learn to bypass antivirus detection for payload execution. We will be using XOR encryption as an obfuscation technique.
 
