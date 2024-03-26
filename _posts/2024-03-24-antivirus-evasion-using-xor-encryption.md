@@ -150,7 +150,6 @@ int main()
  {
   printf("\\x%02x",buf[i]^key);
  }
- 
 }
 ~~~
 You can change the value of the key as per your needs (it can only be a single character).
@@ -179,7 +178,6 @@ int main()
  memcpy(exec, buf, sizeof buf);
  ((void(*)())exec)();
  return 0;
- 
 }
 ~~~
 We get the result, the calc.exe does gets executed.
