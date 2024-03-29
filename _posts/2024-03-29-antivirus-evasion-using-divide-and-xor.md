@@ -150,7 +150,7 @@ Lets check some commads
 
 ![command working](../assets/img/evasion/divide-xor/command-working.webp)
 
-But sadly we were only able to reduce the detection by only 1 check at [kleenscan](https://kleenscan.com/scan_result/bc961af001b60d00f1322ffe4212351febc59cf07a475fdb09b5d3761d07f3a5).
+But sadly we were only able to reduce the detection by only 1, check at [kleenscan](https://kleenscan.com/scan_result/bc961af001b60d00f1322ffe4212351febc59cf07a475fdb09b5d3761d07f3a5).
 
 ![antivirus detection](../assets/img/evasion/divide-xor/antivirus-detection.webp)
 
