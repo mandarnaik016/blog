@@ -121,7 +121,7 @@ edit_page_button: false
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "cybersecurity, security analyst, antivirus, EPP, EDR, XDR, SIEM, SOAR"
+keywords: "cybersecurity, security analyst, antivirus evasion, antivirus, EPP, EDR, XDR, SIEM, SOAR"
 
 ######################################
 # --- Colours / background image --- #
