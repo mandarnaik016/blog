@@ -2,7 +2,7 @@
 layout: post
 title: Ultimate Guide To Block Ads
 subtitle: More Than You Can Ever Imagine!
-cover-img: ../assets/img/adblock/thumb.png
+cover-img: /assets/img/adblock/thumb.png
 thumbnail-img: ""
 tags: [security]
 ---

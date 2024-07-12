@@ -2,7 +2,7 @@
 layout: post
 title: Compression - The Long Way
 subtitle: What Did It Cost? 32MB!
-cover-img: ../assets/img/compression/compression-thumb.jpg
+cover-img: /assets/img/compression/compression-thumb.jpg
 thumbnail-img: ""
 tags: [compression]
 ---
