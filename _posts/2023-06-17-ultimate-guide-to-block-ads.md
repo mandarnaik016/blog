@@ -2,7 +2,7 @@
 layout: post
 title: Ultimate Guide To Block Ads
 subtitle: More Than You Can Ever Imagine!
-cover-img: /assets/img/adblock/thumb.png
+cover-img: ../assets/img/adblock/thumb.png
 thumbnail-img: ""
 tags: [security]
 ---
@@ -11,7 +11,7 @@ tags: [security]
 
 Have at look at below image (p.s: The numbers could have been more than you can ever imagine!).
 
-![Blocked Ads](/assets/img/adblock/blocked-ads-mobile.png){: .mx-auto.d-block :}
+![Blocked Ads](../assets/img/adblock/blocked-ads-mobile.png){: .mx-auto.d-block :}
 
 I am used to change my OS and browsers as the result the numbers of ads blocked is quite less.
 
@@ -23,7 +23,7 @@ I agree with you that some of the sites on the internet survive on the money ear
 
 They exactly work like depicted below
 
-![Cat Blocker](/assets/img/adblock/cat-blocker.png){: .mx-auto.d-block :}
+![Cat Blocker](../assets/img/adblock/cat-blocker.png){: .mx-auto.d-block :}
 
 Nothing rocket science over here they contains the rules to block and filter the webpage you are viewing. 
 
@@ -44,7 +44,7 @@ To block ads at **Host Level**, I use Dan Pollock [filter list](http://someonewh
 	- For Windows 8 and Windows 10 use `C:\Windows\System32\drivers\etc\hosts`
 - Final host file should look similar to below one.
 
-![Host](/assets/img/adblock/host.png){: .mx-auto.d-block :}  
+![Host](../assets/img/adblock/host.png){: .mx-auto.d-block :}  
 
 ### OS Level 
 
@@ -55,7 +55,7 @@ To block ads at **OS level**, I use [NextDNS](https://nextdns.io/).
 - After installing, right-click on NextDNS icon in the Systray then open the Settings. Set your Configuration ID.
 - Right-click on NextDNS icon in the Systray, then click on Enable.
 
-![NextDNS Dashboard](/assets/img/adblock/nextdns-dashboard.png){: .mx-auto.d-block :}  
+![NextDNS Dashboard](../assets/img/adblock/nextdns-dashboard.png){: .mx-auto.d-block :}  
 
 ### Browser Level 
 
@@ -64,6 +64,6 @@ To block ads at **Browser level**, I use [uBlock Origin](https://ublockorigin.co
 - Add the extension to your browser.
 - Enable all the filter list present in uBlock Origin.
 
-![uBlock Dashboard](/assets/img/adblock/ublock-dashboard.png){: .mx-auto.d-block :}
+![uBlock Dashboard](../assets/img/adblock/ublock-dashboard.png){: .mx-auto.d-block :}
 
 Live a happy online life!
