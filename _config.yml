@@ -158,6 +158,7 @@ footer-hover-col: "#0085A1"
 # If you have common JavaScript files that should be included in every page, list them here
 site-js:
   - "/assets/js/defer_plus.min.js"
+  - "/assets/js/main.js"
 
 #################################
 # --- Web Analytics Section --- #
