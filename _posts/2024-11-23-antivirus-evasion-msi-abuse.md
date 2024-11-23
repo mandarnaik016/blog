@@ -11,7 +11,7 @@ Yeah, this is yet another effort by us trying to bypass antivirus! We are using 
 
 The most common format for installing any application designed for Windows is either "EXE" or "MSI." The concepts of stub and packer can be applied to both of them. For EXE files, writing a stub and its extractor is not a tea of anyone's cup. MSI, that might not be the case.
 
-I discovered this technique while I was doing the malware analysis and reverse engineering of [Rozena](/2024-10-19-malware-analysis-rozena/).
+I discovered this technique while I was doing the malware analysis and reverse engineering of [Rozena](/blog/2024-10-19-malware-analysis-rozena/).
 
 We are using WiX for this purpose. Below is the execution workflow.
 
