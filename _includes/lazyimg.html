@@ -1,7 +1,21 @@
 {% if include.img_datasrc %}
-  <!-- If javascript is not on. -->
-  <noscript><img src="{{include.img_datasrc}}" alt="{{include.img_alt}}"/></noscript>
+<!-- If javascript is disabled. -->
+<noscript
+    ><img src="{{include.img_datasrc}}" alt="{{include.img_alt}}"
+/></noscript>
 
-  <!-- If javascript is present. -->
-  <img src="{{include.img_src}}" data-src="{{include.img_datasrc}}" alt="{{include.img_alt}}" loading="lazy" class="mx-auto d-block"/>
+<figure>
+    <img
+        src="{{include.img_src}}"
+        data-src="{{include.img_datasrc}}"
+        alt="{{include.img_alt}}"
+        loading="lazy"
+        class="img-fluid mx-auto d-block"
+    />
+    {% if include.img_caption %}
+    <figcaption class="text-right font-italic text-muted mr-2 mt-1">
+        {{include.img_caption}}
+    </figcaption>
+    {% endif %}
+</figure>
 {% endif %}
