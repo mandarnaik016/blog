@@ -23,6 +23,8 @@ We load the PCAP file in Snort to list the alerts it would have triggered,
 
 The alert count is 138. Let’s view the type of alerts,
 
+The port scanning alert seems interesting.
+
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/alert-port-scanning.png" img_datasrc="../assets/img/analysis/trap/alert-port-scanning.png" img_caption="Figure 2: Alert port scanning" img_alt="Alert port scanning" %}
 
 Multiple HTTP URI alerts were also observed. Typically, either to and fro from **10.6.13.133**.
