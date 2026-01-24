@@ -10,12 +10,12 @@ tags: [analysis, security, network]
 Hello, in this post, we will do network traffic analysis of an exercise [IT'S A TRAP](https://www.malware-traffic-analysis.net/2025/06/13/index.html).
 
 **DETAILS OF LAN SEGMENT**
-• LAN segment range:  10.6.13[.]0/24   (10.6.13[.]0 through 10.6.13[.]255)
-• Domain:  massfriction[.]com
-• Active Directory (AD) domain controller:  10.6.13[.]3 - WIN-DQL4WFWJXQ4
-• AD environment name:  MASSFRICTION
-• LAN segment gateway:  10.6.13[.]1
-• LAN segment broadcast address:  10.6.13[.]255
+- LAN segment range:  10.6.13[.]0/24   (10.6.13[.]0 through 10.6.13[.]255)
+- Domain:  massfriction[.]com
+- Active Directory (AD) domain controller:  10.6.13[.]3 - WIN-DQL4WFWJXQ4
+- AD environment name:  MASSFRICTION
+- LAN segment gateway:  10.6.13[.]1
+- LAN segment broadcast address:  10.6.13[.]255
 
 We load the PCAP file in Snort to list the alerts it would have triggered,
 
@@ -91,7 +91,7 @@ We removed redundant lines,
 Insight (From fig. 20):
 1. The first blob contains base64 encoded strings that are being concatenated later.
 2. The second string contains powershell command to convert from  base64.
-3. The thired string executes the decoded base64 script.
+3. The third string executes the decoded base64 script.
 
 We use the following recipe to extract base64, concatenate them, and decode them.
 
@@ -99,6 +99,7 @@ We use the following recipe to extract base64, concatenate them, and decode them
 Regular_expression('User defined','\\s=\\s"(.*?)"',true,true,false,false,false,false,'List capture groups')
 Find_/_Replace({'option':'Extended (\\n, \\t, \\x...)','string':'\\n'},'',true,false,true,false)
 From_Base64('A-Za-z0-9+/=',true,false)
+
 ```
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/decoded-base64-of-powershell-script-1.png" img_datasrc="../assets/img/analysis/trap/decoded-base64-of-powershell-script-1.png" img_caption="Figure 21: Decoded base64 of powershell script 1" img_alt="Decoded base64 of powershell script 1" %}
@@ -111,9 +112,9 @@ After deobfuscation, the script we get,
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/deobfuscated-powershell-script-1.1.png" img_datasrc="../assets/img/analysis/trap/deobfuscated-powershell-script-1.1.png" img_caption="Figure 23: Deobfuscated powershell script 1.1" img_alt="Deobfuscated powershell script 1.1" %}
 
-The output of the command **systeminfo** is passed as a post request to the URL "eventdata-microsoft[.]live/NV4RgNEu".
+The output of the command **systeminfo** is passed as a POST request to the URL "eventdata-microsoft[.]live/NV4RgNEu".
 
-We could see an outbound request being made to an uncovered URL.
+We could see an outbound request being made to this uncovered URL.
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/outbound-request-made-by-powershell-script-1.1.png" img_datasrc="../assets/img/analysis/trap/outbound-request-made-by-powershell-script-1.1.png" img_caption="Figure 24: Outbound request made by powershell script 1.1" img_alt="Outbound request made by powershell script 1.1" %}
 
@@ -143,7 +144,7 @@ Removing them, we are left with.
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/cleaned-powershell-script-2.png" img_datasrc="../assets/img/analysis/trap/cleaned-powershell-script-2.png" img_caption="Figure 29: Cleaned powershell script 2" img_alt="Cleaned powershell script 2" %}
 
-We could observe same pattern of script containing base64 blobs being concatenated and invoked. We use the same CyberChef recipe used earlier.
+We could observe same pattern of script containing base64 blobs being concatenated and invoked. We use the same CyberChef recipe as earlier.
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/decoded-base64-of-powershell-script-2.png" img_datasrc="../assets/img/analysis/trap/decoded-base64-of-powershell-script-2.png" img_caption="Figure 30: Decoded base64 of powershell script 2" img_alt="Decoded base64 of powershell script 2" %}
 
@@ -186,9 +187,9 @@ For the user account name, we use kerberos protocol.
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/kerberos-protocol.png" img_datasrc="../assets/img/analysis/trap/kerberos-protocol.png" img_caption="Figure 17: Kerberos protocol" img_alt="Kerberos protocol" %}
 
 QUESTIONS? **ANSWERS**
-• What is the IP address of the infected Windows client? **10.6.13.133**
-• What is the mac address of the infected Windows client? **24:77:03:AC:97:DF**
-• What is the host name of the infected Windows client?  **DESKTOP-5AVE44C**
-• What is the user account name from the infected Windows client? **rgaines**
+- What is the IP address of the infected Windows client? **10.6.13.133**
+- What is the mac address of the infected Windows client? **24:77:03:AC:97:DF**
+- What is the host name of the infected Windows client?  **DESKTOP-5AVE44C**
+- What is the user account name from the infected Windows client? **rgaines**
 
 We meet next time dissecting another sample or comming up with an evasion technique until then Nabad gelyo.
