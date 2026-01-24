@@ -183,11 +183,11 @@ Insight (From fig. 34):
 
 We can get the MAC address and hostname using DHCP protocol.
 
-{% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/dhcp-protocol.png" img_datasrc="../assets/img/analysis/trap/dhcp-protocol.png" img_caption="Figure 13: DHCP protocol" img_alt="DHCP protocol" %}
+{% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/dhcp-protocol.png" img_datasrc="../assets/img/analysis/trap/dhcp-protocol.png" img_caption="Figure 35: DHCP protocol" img_alt="DHCP protocol" %}
 
 For the user account name, we use kerberos protocol.
 
-{% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/kerberos-protocol.png" img_datasrc="../assets/img/analysis/trap/kerberos-protocol.png" img_caption="Figure 17: Kerberos protocol" img_alt="Kerberos protocol" %}
+{% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/kerberos-protocol.png" img_datasrc="../assets/img/analysis/trap/kerberos-protocol.png" img_caption="Figure 36: Kerberos protocol" img_alt="Kerberos protocol" %}
 
 QUESTIONS? **ANSWERS**
 - What is the IP address of the infected Windows client? **10.6.13.133**
