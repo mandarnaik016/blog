@@ -59,7 +59,7 @@ The Virustotal results confirms we are on the right track.
 
 All these outbound connections were originating from **10.6.13.133** (The Snort log also had the same IP for HTTP URI alerts Ref. fig. 2).
 
-We now analyze http requets from the same ip address,
+We now analyze HTTP requets from the same IP address,
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/suspicious-outbound-request.png" img_datasrc="../assets/img/analysis/trap/suspicious-outbound-request.png" img_caption="Figure 16: Suspicious outbound request" img_alt="Suspicious outbound request" %}
 
@@ -99,8 +99,8 @@ We use the following recipe to extract base64, concatenate them, and decode them
 Regular_expression('User defined','\\s=\\s"(.*?)"',true,true,false,false,false,false,'List capture groups')
 Find_/_Replace({'option':'Extended (\\n, \\t, \\x...)','string':'\\n'},'',true,false,true,false)
 From_Base64('A-Za-z0-9+/=',true,false)
-
 ```
+
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/decoded-base64-of-powershell-script-1.png" img_datasrc="../assets/img/analysis/trap/decoded-base64-of-powershell-script-1.png" img_caption="Figure 21: Decoded base64 of powershell script 1" img_alt="Decoded base64 of powershell script 1" %}
 
@@ -157,7 +157,7 @@ When deobfuscated, we get a readable PowerShell script as,
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/deobfuscated-powershell-script-2.1-part1.png" img_datasrc="../assets/img/analysis/trap/deobfuscated-powershell-script-2.1-part1.png" img_caption="Figure 32: Deobfuscated powershell script 2.1 part1" img_alt="Deobfuscated powershell script 2.1 part1" %}
 
 Insight (From fig. 32):
-1. The php binaries for Windows are being downloaded from the URL of version 8.2.28 in %temp% locations as php.zip.
+1. The php binaries for Windows are being downloaded from the URL in %temp% locations as php.zip.
 2. Then the downloaded zip is extracted to ApplicationData\php directory.
 3. After extraction, the file is deleted from the %temp% location.
 4. The config and php binary absolute paths are set to,
@@ -167,7 +167,7 @@ Insight (From fig. 32):
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/decoded-base64-of-powershell-script-2.1.png" img_datasrc="../assets/img/analysis/trap/decoded-base64-of-powershell-script-2.1.png" img_caption="Figure 33: Decoded base64 of powershell script 2.1" img_alt="Decoded base64 of powershell script 2.1" %}
 
-The decoded base64 contains obfuscated php script.
+The decoded base64 contains obfuscated **php** script.
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/deobfuscated-powershell-script-2.1-part2.png" img_datasrc="../assets/img/analysis/trap/deobfuscated-powershell-script-2.1-part2.png" img_caption="Figure 34: Deobfuscated powershell script 2.1 part2" img_alt="Deobfuscated powershell script 2.1 part2" %}
 
