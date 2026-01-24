@@ -103,6 +103,7 @@ Find_/_Replace({'option':'Extended (\\n, \\t, \\x...)','string':'\\n'},'',true,f
 From_Base64('A-Za-z0-9+/=',true,false)
 ```
 
+We load the recipe in CyberChef,
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/decoded-base64-of-powershell-script-1.png" img_datasrc="../assets/img/analysis/trap/decoded-base64-of-powershell-script-1.png" img_caption="Figure 21: Decoded base64 of powershell script 1" img_alt="Decoded base64 of powershell script 1" %}
 
