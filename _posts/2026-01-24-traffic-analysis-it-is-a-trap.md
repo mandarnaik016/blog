@@ -176,8 +176,8 @@ The decoded base64 contains obfuscated **php** script.
 
 Insight (From fig. 34):
 1. The first section decodes the base64 data (containing php script) and writes to a file ApplicationData\php\config.cfg pointed by the variable {% include highlight.html text="$mv" type="red" %}.
-2. The second section executes the obfuscated PHP script using the official PHP binary downloaded earlier and extracted in ApplicationData\php folder. The output of the executed php file is written in two files, pointed by {% include highlight.html text="$UZ3eaxi6FRJQ0yaCX" type="red" %} and {% include highlight.html text="$GhzCP" type="red" %}.
-3. The content of those is stored in {% include highlight.html text="$lMeQbHXUc" type="red" %} and {% include highlight.html text="$2oRVdufAtTxwFJB" type="red" %}.
+2. The second section executes the obfuscated PHP script using the official PHP binary downloaded earlier and extracted in ApplicationData\php folder. The output of the executed php file is written in two files, pointed by {% include highlight.html text="$UZ3eaxi6FRJQ0yaCX" type="red" %}  and {% include highlight.html text="$GhzCP" type="red" %}.
+3. The content of those is stored in {% include highlight.html text="$lMeQbHXUc" type="red" %}  and {% include highlight.html text="$2oRVdufAtTxwFJB" type="red" %}.
 4. After the content is stored, the created files are deleted.
 5. The third section sends the data as a POST request to the URL "comprehensive-cabin-spend-organic[.]trycloudflare[.]com/NV4RgNEu" after concatenation via a delimiter "-=-=-=-=-=-".
 
