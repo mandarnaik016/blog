@@ -6,3 +6,23 @@ img.mx-auto.d-block[loading="lazy"] {
     -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.7);
 }
+
+.highlight {
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.highlight-red {
+    background: rgb(255, 220, 220);
+    color: rgb(160, 0, 0);
+}
+
+.highlight-green {
+    background: rgb(220, 255, 220);
+    color: rgb(0, 120, 0);
+}
+
+.highlight-blue {
+    background: rgb(220, 235, 255);
+    color: rgb(0, 70, 160);
+}
