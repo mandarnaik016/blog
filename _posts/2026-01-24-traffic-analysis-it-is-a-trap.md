@@ -164,8 +164,8 @@ Insight (From fig. 32):
 2. Then the downloaded zip is extracted to ApplicationData\php directory.
 3. After extraction, the file is deleted from the %temp% location.
 4. The config and php binary absolute paths are set to,
-	- $mv = ApplicationData\php\config.cfg
-	- $YupgDUknfb = ApplicationData\php\php.exe
+	- {% include highlight.html text="$mv" type="red" %} = ApplicationData\php\config.cfg
+	- {% include highlight.html text="$YupgDUknfb" type="red" %} = ApplicationData\php\php.exe
 5. We could see another base64 encoded string stored in a variable, $X9.
 
 {% include lazyimg.html img_src="../assets/img/analysis/trap/lowly/decoded-base64-of-powershell-script-2.1.png" img_datasrc="../assets/img/analysis/trap/decoded-base64-of-powershell-script-2.1.png" img_caption="Figure 33: Decoded base64 of powershell script 2.1" img_alt="Decoded base64 of powershell script 2.1" %}
