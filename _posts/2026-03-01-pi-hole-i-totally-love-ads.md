@@ -14,6 +14,8 @@ In this post, we will set up [Pi-hole](https://pi-hole.net/), a DNS-level ad-blo
 
 ## Ingredient
 
+To cook we need the following,
+
 - Raspberry Pi Zero 2 W
 	+ Cost ~1800 INR
 - Raspberry Pi Case
