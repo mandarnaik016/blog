@@ -12,6 +12,8 @@ Until Ad-blockers arrived!.
 
 In this post, we will set up [Pi-hole](https://pi-hole.net/), a DNS-level ad-blocker that blocks domains that serve ads and trackers, thereby enhancing network security.
 
+---
+
 ## Ingredient
 
 To cook we need the following,
@@ -22,7 +24,9 @@ To cook we need the following,
   + Cost ~300 INR
 - DietPi
 - microSDXC
-  + Took from sibling.
+  + Took from sibling (Wounded, but battle WON!).
+
+---
 
 ## Installation
 
@@ -67,6 +71,8 @@ Another version check to confirm Unbound installation.
     img_alt="Unbound version"
 %}
 
+---
+
 ## Customization
 
 We add Unbound as **Custom DNS servers** and uncheck any Upstream DNS Servers.
@@ -81,10 +87,8 @@ We add Unbound as **Custom DNS servers** and uncheck any Upstream DNS Servers.
 The default list is [StevenBlack](https://github.com/StevenBlack/hosts), I personally use the following list for more extensive coverage.
 
 ```
-https://someonewhocares.org/hosts/zero/
-https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts;showintro=0
-https://hosts.anudeep.me/mirror/adservers.txt
 https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
 https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
 ```
 
@@ -96,7 +100,7 @@ https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.t
 
 Since the list contains only static domains, it becomes insufficient for newly generated domains. Using regex enables us to dynamically address this limitation.
 
-I use the below Regex deny,
+I use the below Regex deny (*pihole-regex* and *no-google*),
 ```
 ^ad([sxv]?[0-9]*|system)[_.-]([^.[:space:]]+\.){1,}|[_.-]ad([sxv]?[0-9]*|system)[_.-]
 ^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]
@@ -123,6 +127,8 @@ I use the below Regex deny,
 (.*\.|^)y(outube|timg)($|\..+)
 ```
 
+---
+
 ## Configuration
 
 For convenience, the router’s DNS server can be changed to the Pi-hole IP address so that every device connected to the router uses Pi-hole by default.
@@ -136,6 +142,8 @@ For convenience, the router’s DNS server can be changed to the Pi-hole IP addr
 
 If the router's DNS address cannot be changed, manually configure the DNS servers on each device.
 
+---
+
 ## Result
 
 The statistics for Pi-hole in the home network with the same set of lists and regex deny rules.
@@ -147,7 +155,7 @@ The statistics for Pi-hole in the home network with the same set of lists and re
     img_alt="Pi-hole stats"
 %}
 
-On average, nearly 5K out of 17K queries are **blocked**!.
+On average, nearly 12K out of 21K queries are **blocked**!.
 
 Additionally, Unbound’s DNS caching significantly improves response time and overall DNS performance.
 
