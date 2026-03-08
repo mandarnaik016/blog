@@ -12,8 +12,6 @@ Until Ad-blockers arrived!.
 
 In this post, we will set up [Pi-hole](https://pi-hole.net/), a DNS-level ad-blocker that blocks domains that serve ads and trackers, thereby enhancing network security.
 
----
-
 ## Ingredient
 
 To cook we need the following,
@@ -25,8 +23,6 @@ To cook we need the following,
 - DietPi
 - microSDXC
   + Took from sibling (Wounded, but battle WON!).
-
----
 
 ## Installation
 
@@ -70,8 +66,6 @@ Another version check to confirm Unbound installation.
     img_caption="Figure 4: Unbound version"
     img_alt="Unbound version"
 %}
-
----
 
 ## Customization
 
@@ -127,8 +121,6 @@ I use the below Regex deny (*pihole-regex* and *no-google*),
 (.*\.|^)y(outube|timg)($|\..+)
 ```
 
----
-
 ## Configuration
 
 For convenience, the router’s DNS server can be changed to the Pi-hole IP address so that every device connected to the router uses Pi-hole by default.
@@ -141,8 +133,6 @@ For convenience, the router’s DNS server can be changed to the Pi-hole IP addr
 %}
 
 If the router's DNS address cannot be changed, manually configure the DNS servers on each device.
-
----
 
 ## Result
 
