@@ -24,6 +24,8 @@ To cook we need the following,
 - microSDXC
   + Took from sibling (Wounded, but battle WON!).
 
+<br />
+
 ## Installation
 
 We flash our SD card with DietPi OS, then set up [Wi-Fi](https://kenilt.wordpress.com/2025/07/31/how-to-install-dietpi-on-a-raspberry-pi-step-by-step-guide/). 
@@ -120,6 +122,8 @@ I use the below Regex deny (*pihole-regex* and *no-google*),
 (.*\.|^)waze($|\..+)
 (.*\.|^)y(outube|timg)($|\..+)
 ```
+
+<br />
 
 ## Configuration
 
