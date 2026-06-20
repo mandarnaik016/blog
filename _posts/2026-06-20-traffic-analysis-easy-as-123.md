@@ -56,5 +56,5 @@ QUESTIONS? **ANSWERS**
  - What is the host name of the infected Windows client? **DESKTOP-TEYQ2NR**
  - What is the user account name from the infected Windows client? **brolf**
  - What is the full name of the user from the user account? **Becka Rolf**
-
+ 
 We meet next time dissecting another sample or comming up with an evasion technique until then Aloha Aloha.
