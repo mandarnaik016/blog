@@ -23,11 +23,11 @@ Hello, in this post, we will perform network traffic analysis for the [EASY AS 1
 
 Let's begin
 
-1. IP address of the infected system.
+- IP address of the infected system.
 
- * From the briefing, there is a connection to NetSupport Manager RAT IP address 45.131.214[.]85. We hunt for the packets containing this IP address.
+ 1. From the briefing, there is a connection to NetSupport Manager RAT IP address 45.131.214[.]85. We hunt for the packets containing this IP address.
  {% include lazyimg.html img_src="../assets/img/analysis/easy/lowly/ip_address_of_infected_system.png" img_datasrc="../assets/img/analysis/easy/ip_address_of_infected_system.png" img_caption="Figure 1: IP address" img_alt="IP address" %}
- * We could observe a connection initiated only from *10.2.28[.]88*.
+ 2. We could observe a connection initiated only from *10.2.28[.]88*.
 
 2. MAC address of the infected system.
 
@@ -45,7 +45,7 @@ Let's begin
 
 4. User account name from the infected system.
  * The CNameString from Kerberos would reflect the user account name. In this case, *brolf*.
- {% include lazyimg.html img_src="../assets/img/analysis/easy/lowly/account_name_of_infected_system.png" img_datasrc="../assets/img/analysis/easy/account_name_of_infected_system.pngort-alert-count.png" img_caption="Figure 5: Account name" img_alt="Account name" %}
+ {% include lazyimg.html img_src="../assets/img/analysis/easy/lowly/account_name_of_infected_system.png" img_datasrc="../assets/img/analysis/easy/account_name_of_infected_system.png" img_caption="Figure 5: Account name" img_alt="Account name" %}
 
 5. Full name of user.
  * We utilize the SAMR (Security Account Manager Remote Protocol) to get this information,
