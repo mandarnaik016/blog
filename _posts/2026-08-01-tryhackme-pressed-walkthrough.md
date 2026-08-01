@@ -32,7 +32,7 @@ After analysis, we didn’t find any successful login to POP service. Although S
 {% include lazyimg.html img_src="../assets/img/analysis/pressed/lowly/auth-smtp.png" img_datasrc="../assets/img/analysis/pressed/auth-smtp.png" img_caption="Figure 4: Auth smtp" img_alt="Auth smtp" %}
 Down the flow, we find a mail with subject _Urgent_.
 
-{% include lazyimg.html img_src="../assets/img/analysis/pressed/lowly/ suspicious-subject.png" img_datasrc="../assets/img/analysis/pressed/ suspicious-subject.png" img_caption="Figure 5: Suspicious subject" img_alt="Suspicious subject" %}
+{% include lazyimg.html img_src="../assets/img/analysis/pressed/lowly/suspicious-subject.png" img_datasrc="../assets/img/analysis/pressed/suspicious-subject.png" img_caption="Figure 5: Suspicious subject" img_alt="Suspicious subject" %}
 
 When followed in stream, It had a content disposition with filename _sheet.ods_.
 
