@@ -83,3 +83,5 @@ The decrypted data contains the second and third answer of the room.
 We can concatenate all the answers and decode the base64 encoded flag.
 
 {% include lazyimg.html img_src="../assets/img/analysis/pressed/lowly/flag.png" img_datasrc="../assets/img/analysis/pressed/flag.png" img_caption="Figure 17: Flag" img_alt="Flag" %}
+
+Thank you. We meet next time to make security better. Until then, خدا حافظ!.
