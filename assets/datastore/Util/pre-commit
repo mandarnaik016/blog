@@ -1,0 +1,19 @@
+#!/bin/sh
+
+git diff --cached --name-only --diff-filter=ACM | grep -Ei '\.png$' | while read -r file
+do
+    if [ -f "$file" ]; then
+        echo "Squashing: $file"
+        pngquant --force --ext .png --skip-if-larger --quality=45-85 --speed=1 "$file"
+        dir=$(dirname "$file")
+        base=$(basename "$file" .png)
+        echo "Lowly: $file"
+        lowly "$file"
+        if [ -f "$dir/${base}-lowly.png" ]; then
+            mkdir -p "$dir/lowly"
+            mv "$dir/${base}-lowly.png" "$dir/lowly/${base}.png"
+            git add "$dir/lowly/${base}.png"
+        fi
+        git add "$file"
+    fi
+done
