@@ -41,7 +41,6 @@ Answer: We could picture the following,
 
 KERNEL32.dll for _Lab01-01.exe_,
 
-|     |     |
 | --- | --- |
 | Name | Finding |
 | CreateFileA | Creates or Opens a file. |
@@ -55,7 +54,6 @@ KERNEL32.dll for _Lab01-01.exe_,
 
 KERNEL32.dll and MSVCRT.dll for _Lab01-01.dll_,
 
-|     |     |
 | --- | --- |
 | Name | Finding |
 | CreateProcessA | Creates process. |
