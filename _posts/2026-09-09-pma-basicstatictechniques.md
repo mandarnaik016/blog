@@ -49,6 +49,8 @@ KERNEL32.dll for _Lab01-01.exe_,
 | FindNextFileA & FindFirstFileA | Searches a file. |
 | FindClose | Closes searching |
 
+<br>
+
 {% include lazyimg.html img_src="../assets/img/pma/basicstatictechniques/lowly/answer-4-lab-1-1.png" img_datasrc="../assets/img/pma/basicstatictechniques/answer-4-lab-1-1.png" img_caption="Figure 7: Answer 4 Lab 1-1" img_alt="Answer 4 Lab 1-1" %}
 
 KERNEL32.dll and MSVCRT.dll for _Lab01-01.dll_,
@@ -59,6 +61,8 @@ KERNEL32.dll and MSVCRT.dll for _Lab01-01.dll_,
 | CreateProcessA | Creates process. |
 | malloc | Allocates memory. |
 | free | Frees the allocated memory. |
+
+<br>
 
 {% include lazyimg.html img_src="../assets/img/pma/basicstatictechniques/lowly/answer-4-lab-1-1-part-2.png" img_datasrc="../assets/img/pma/basicstatictechniques/answer-4-lab-1-1-part-2.png" img_caption="Figure 8: Answer 4 Lab 1-1 Part 2" img_alt="Answer 4 Lab 1-1 Part 2" %}
 
@@ -94,6 +98,8 @@ Answer: The binary is packed using UPX. We can unpack it using,
 ```
 upx -d "Lab01-02.exe" -o "Lab01-02_unpacked.exe"
 ```
+
+<br>
 
 {% include lazyimg.html img_src="../assets/img/pma/basicstatictechniques/lowly/answer-2-lab-1-2.png" img_datasrc="../assets/img/pma/basicstatictechniques/answer-2-lab-1-2.png" img_caption="Figure 12: Answer 2 Lab 1-2" img_alt="Answer 2 Lab 1-2" %}
 
