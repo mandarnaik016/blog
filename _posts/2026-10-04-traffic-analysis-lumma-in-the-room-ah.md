@@ -41,7 +41,7 @@ The victim is `10.1.21[.]58`. We can use this IP address as the starting point f
 
 We analyze the DNS queries, filter out potential noise, and arrange the results chronologically by timestamp.
 
-{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/suspicious-dns-queries.png" img_datasrc="../assets/img/analysis/lumma/suspicious-dns-queries.png" img_caption="Fig. 2: DNS queries" img_alt="DNS queries" %}
+{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/suspicious-dns-queries.png" img_datasrc="../assets/img/nta/lumma/suspicious-dns-queries.png" img_caption="Fig. 2: DNS queries" img_alt="DNS queries" %}
 
 ```sql
 _path == "dns" | where id.orig_h == 10.1.21.58 |  sort ts | cut query | where !grep(/(^wpad.*|^_ldap.*|.*.microsoft.com|.*.google.com|.*.googleapis.com|.*.gstatic.com|.*.local|.*.bing.com|.*.msn.com)/, query) and query != "desktop-es9f3ml"
@@ -61,7 +61,7 @@ We can filter the domains listed below as suspicious.
 
 The corresponding resolved IPs
 
-{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/resolved-dns.png" img_datasrc="../assets/img/analysis/lumma/resolved-dns.png" img_caption="Fig. 3: DNS resolution" img_alt="DNS resolution" %}
+{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/resolved-dns.png" img_datasrc="../assets/img/nta/lumma/resolved-dns.png" img_caption="Fig. 3: DNS resolution" img_alt="DNS resolution" %}
 
 ```sql
 _path == "dns" | cut query, answers | where query == "hiyter.com" or query == "media.megafilehub4.lat" or query == "arch.filemegahab4.sbs" or query == "whooptm.cyou" or query == "whitepepper.su" or query == "holiday-forever.cc" or query == "communicationfirewall-security.cc" | where answers != null | sort query | uniq
@@ -71,7 +71,7 @@ The IP 153.92.1\[.\]49 was resolved by the query `whitepepper[.]su `. We inspect
 
 We can see a series of requests exchanged, which are used for fingerprinting.
 
-{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/suspicious-http.png" img_datasrc="../assets/img/analysis/lumma/suspicious-http.png" img_caption="Fig. 4: HTTP traffic" img_alt="HTTP traffic" %}
+{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/suspicious-http.png" img_datasrc="../assets/img/nta/lumma/suspicious-http.png" img_caption="Fig. 4: HTTP traffic" img_alt="HTTP traffic" %}
 
 We follow the conversation in the HTTP stream to establish a chronology.
 
@@ -105,7 +105,7 @@ The POST request content is stored on server in a ZIP archive named using the id
 
 From the DHCP log, we can get the mac and hostname,
 
-{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/endpoint-info.png" img_datasrc="../assets/img/analysis/lumma/endpoint-info.png" img_caption="Fig. 5: Endpoint info" img_alt="Endpoint info" %}
+{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/endpoint-info.png" img_datasrc="../assets/img/nta/lumma/endpoint-info.png" img_caption="Fig. 5: Endpoint info" img_alt="Endpoint info" %}
 
 ```sql
 _path == "dhcp" |  where client_addr == 10.1.21.58 | cut client_addr, mac, host_name
@@ -117,7 +117,7 @@ _path == "dhcp" |  where client_addr == 10.1.21.58 | cut client_addr, mac, host_
 
 The user account name can be extracted from the Kerberos logs.
 
-{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/account-name.png" img_datasrc="../assets/img/analysis/lumma/account-name.png" img_caption="Fig. 6: Account name" img_alt="Account name" %}
+{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/account-name.png" img_datasrc="../assets/img/nta/lumma/account-name.png" img_caption="Fig. 6: Account name" img_alt="Account name" %}
 
 | User name |
 | - |
@@ -125,7 +125,7 @@ The user account name can be extracted from the Kerberos logs.
 
 The full name of the user can be extracted from SAMR protocol log,
 
-{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/user-full-name.png" img_datasrc="../assets/img/analysis/lumma/user-full-name.png" img_caption="Fig. 7: Full name" img_alt="Full name" %}
+{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/user-full-name.png" img_datasrc="../assets/img/nta/lumma/user-full-name.png" img_caption="Fig. 7: Full name" img_alt="Full name" %}
 
 | Full name |
 | - |
