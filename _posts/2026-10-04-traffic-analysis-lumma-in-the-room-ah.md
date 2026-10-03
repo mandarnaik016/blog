@@ -29,7 +29,7 @@ The characteristics of your environment are:
 
 Based on the briefing, a signature hit was detected on traffic to `153.92.1[.]49` over TCP port `80`. We can identify the systems that initiated connections to this destination
 
-{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/victim.png" img_datasrc="../assets/img/analysis/lumma/victim.png" img_caption="Fig. 1: Victim" img_alt="Victim" %}
+{% include lazyimg.html img_src="../assets/img/nta/lumma/lowly/victim.png" img_datasrc="../assets/img/nta/lumma/victim.png" img_caption="Fig. 1: Victim" img_alt="Victim" %}
 
 ```sql
 _path == "conn" | where id.resp_h == 153.92.1.49 and id.resp_p == 80 | cut id.orig_h | sort | uniq
