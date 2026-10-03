@@ -140,4 +140,4 @@ The full name of the user can be extracted from SAMR protocol log,
 3. What is the host name of the infected Windows client? **DESKTOP\-ES9F3ML**
 4. What is the user account name from the infected Windows client? **gwyatt**
 5. What is the full name of the user from the user account? **Gabriel Wyatt**
-6. What is the domain from 153.92.1[.]49 that triggered the alert for Lumma Stealer? **`whitepepper[.]su**
+6. What is the domain from 153.92.1[.]49 that triggered the alert for Lumma Stealer? **whitepepper[.]su**
