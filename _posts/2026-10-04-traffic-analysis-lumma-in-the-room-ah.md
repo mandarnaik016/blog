@@ -111,6 +111,8 @@ From the DHCP log, we can get the mac and hostname,
 _path == "dhcp" |  where client_addr == 10.1.21.58 | cut client_addr, mac, host_name
 ```
 
+<br>
+
 | Infected | MAC | Hostname |
 |-|-|-|
 | 10.1.21.58 | 00:21:5d:c8:0e:f2 | DESKTOP\-ES9F3ML |
