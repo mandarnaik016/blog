@@ -4,7 +4,7 @@ title: Machine Learning - Predicting Cyber Attacks
 subtitle: History Leads Future!
 cover-img: /assets/img/aiml/aiml.jpg
 thumbnail-img: ""
-tags: [machine learning, security]
+tags: [artificial intelligence, machine learning, security]
 ---
 
 Hello, in this post, we will use machine learning to predict whether an event is attack or not.
