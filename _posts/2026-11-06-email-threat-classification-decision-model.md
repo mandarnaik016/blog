@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Email Threat Classification - Decision Model
+title: Decision Model - Email Threat Classification
 subtitle: Fast Enough To Be Worthy ;)
 cover-img: /assets/img/aiml/aiml.jpg
 thumbnail-img: ""
