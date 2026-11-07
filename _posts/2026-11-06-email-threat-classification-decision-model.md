@@ -20,7 +20,7 @@ An email contains several data points that can help determine whether it is legi
 Some of these parameters are visible to the naked eye:
 - Sender
 - Reply-To
-- Subjecta
+- Subject
 - Email body
 - Embedded URLs
 
