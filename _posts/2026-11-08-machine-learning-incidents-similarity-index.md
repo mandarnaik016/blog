@@ -223,7 +223,7 @@ Thank you. We meet next time to make security better. Until then, Sayonara!.
 
 [predict]: /blog/2026-02-22-machine-learning-predicting-cyber-attacks/
 [xgboost]: https://xgboost.ai/
-[chromadb]: ../assets/datastore/incidents-similarity-index.ipynb
+[chromadb]: https://github.com/mandarnaik016/blog/blob/main/assets/datastore/incidents-similarity-index.ipynb
 [load-dataset]: ../assets/img/aiml/similarity-index/load-dataset.png
 [identified-columns]: ../assets/img/aiml/similarity-index/identified-columns.png
 [result-1]: ../assets/img/aiml/similarity-index/result-1.png
