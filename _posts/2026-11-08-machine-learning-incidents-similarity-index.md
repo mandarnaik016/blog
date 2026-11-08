@@ -19,13 +19,9 @@ Using the same dataset, we can go a step further by adding similarity indexing a
 
 We install and import required libraries,
 
-```bash
-%pip install pandas numpy scikit-learn chromadb 
-```
-
-<br>
-
 ```python
+%pip install pandas numpy scikit-learn chromadb 
+
 import pandas as pd
 import chromadb
 
@@ -35,7 +31,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 ```
 
-<br>
+Usage:
 
 1. _Pandas_: Load and manipulate the dataset.
 2. _ChromaDB_: Store vector embeddings and perform similarity searches.
