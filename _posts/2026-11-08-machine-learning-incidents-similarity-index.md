@@ -23,6 +23,8 @@ We install and import required libraries,
 %pip install pandas numpy scikit-learn chromadb 
 ```
 
+<br>
+
 ```python
 import pandas as pd
 import chromadb
@@ -32,6 +34,8 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 ```
+
+<br>
 
 1. _Pandas_: Load and manipulate the dataset.
 2. _ChromaDB_: Store vector embeddings and perform similarity searches.
@@ -137,6 +141,8 @@ else:
     print("Collection already contains data. Skipping insertion.")
 print("Total records:", collection.count())
 ```
+
+<br>
 
 ## RESULTS
 
