@@ -221,7 +221,7 @@ Source code: [Incidents Similarity Index][chromadb]
 Thank you. We meet next time to make security better. Until then, Sayonara!.
 
 
-[predict]: /2026-02-22-machine-learning-predicting-cyber-attacks/
+[predict]: /blog/2026-02-22-machine-learning-predicting-cyber-attacks/
 [xgboost]: https://xgboost.ai/
 [chromadb]: ../assets/datastore/incidents-similarity-index.ipynb
 [load-dataset]: ../assets/img/aiml/similarity-index/load-dataset.png
