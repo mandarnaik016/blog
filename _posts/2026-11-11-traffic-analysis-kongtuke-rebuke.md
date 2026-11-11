@@ -34,7 +34,7 @@ In the initial triage, we note the top endpoints involved in conversions by numb
 
 ![Top conversation][top-conversation]
 
-We hypothetically assume the system with IP 10.9.11\[.\]135 is infected. To confirm the hypothesis, leverage DNS packets to extract and filter the domains for subsequent reputation analysis.
+We hypothetically assume the system with IP 10.9.11\[.\]135 is infected. To confirm the hypothesis, leverage DNS packets to extract and filter the domains for subsequent reputation analysis (VT).
 
 | Domain                    | Reputation | Community |
 | ------------------------- | ---------- | --------- |
