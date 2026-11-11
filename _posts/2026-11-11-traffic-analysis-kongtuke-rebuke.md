@@ -7,15 +7,15 @@ thumbnail-img: ""
 tags: [analysis, security, network]
 ---
 
-* TOC
-{:toc}
-
+- TOC
+  {:toc}
 
 ## BACKGROUND
 
 I investigated recent Kongtuke ClickFix activity using a domain-joined host in an Active Directory environment.
 
 The characteristics of this environment are:
+
 - LAN segment range: 10.9.11\[.\]0/24 (10.9.11\[.\]0 through 10.9.11\[.\]255)
 - Domain: overhands\[.\]org
 - AD environment name: OVERHANDS
@@ -23,13 +23,12 @@ The characteristics of this environment are:
 - LAN segment gateway: 10.9.11\[.\]1
 - LAN segment broadcast address: 10.9.11\[.\]255
 
-<br>
-
 ## METHODOLOGY
 
 The infection method is **ClickFix**, which uses a CAPTCHA-solving webpage to trick users into running a series of commands under the guise of completing CAPTCHA verification.
 
 I have conducted an in-depth malware analysis of these techniques in the following articles.
+
 1. [Malware Analysis - Lumma Stealer][lumma-ma]
 2. [Traffic Analysis - LUMMA IN THE ROOM-AH][lumma-na]
 
@@ -39,15 +38,15 @@ In the initial triage, we note the top endpoints involved in conversions by numb
 
 We hypothetically assume the system with IP `10.9.11[.]135` is infected. To confirm the hypothesis, leverage DNS packets to extract and filter the domains for subsequent reputation analysis (VT).
 
-| Domain                    | Reputation | Community |
-| ------------------------- | ---------- | --------- |
-| aatthews[.]cfd            | 19/92      | -60       |
-| hyko[.]fif-lost[.]com     | 1/92       | 0         |
-| logincrypt8338[.]com      | 18/92      | -60       |
-| opscast3707[.]net         | 1/92       | 0         |
-| quadcinema[.]com          | 0/92       | 0         |
-| stream[.]fif-lost[.]com   | 1/92       | 0         |
-| winrun2915[.]com          | 6/92       | -11       |
+| Domain                  | Reputation | Community |
+| ----------------------- | ---------- | --------- |
+| aatthews[.]cfd          | 19/92      | -60       |
+| hyko[.]fif-lost[.]com   | 1/92       | 0         |
+| logincrypt8338[.]com    | 18/92      | -60       |
+| opscast3707[.]net       | 1/92       | 0         |
+| quadcinema[.]com        | 0/92       | 0         |
+| stream[.]fif-lost[.]com | 1/92       | 0         |
+| winrun2915[.]com        | 6/92       | -11       |
 
 We correlate DNS queries to identify potentially malicious connections. We then proceed to build a profile of the infected system.
 
@@ -62,8 +61,6 @@ Subsequently, the hostname and username can be retrieved from Kerberos traffic.
 Finally, we retrieve the user's full name using the SAMR protocol.
 
 ![Full name][full-name]
-
-<br>
 
 ## RABBIT HOLE
 
@@ -81,57 +78,59 @@ The script, `hxxps[://]hodkiewhcz[.]sbs/6oll0u79[.]js`, is completely unrelated 
 
 Since the available tools are unable to deobfuscate the script, we proceed with manual deobfuscation.
 
----
+**SCRIPT WALKTHROUGH #1**
 
 ![Cleaned script 1][cleaned-script-1]
 
 The function performs the following actions:
+
 1. Retrieves its execution domain, i.e., `hodkiewhcz[.]sbs`, from the HTML document.
 2. Performs canvas fingerprinting to collect browser and system information.
 3. Creates a hidden iframe.
 
----
+**SCRIPT WALKTHROUGH #2**
 
 ![Cleaned script 2][cleaned-script-2]
 
 The function performs the following actions:
+
 1. Sends an HTTP GET request and processes the response.
 2. Creates a hidden iframe containing another embedded script.
 
----
+**SCRIPT WALKTHROUGH #3**
 
 ![Cleaned script 3][cleaned-script-3]
 
 The function performs the following actions:
+
 1. Copies the received command to the victim's clipboard.
 2. Sends an HTTP POST request and processes the response.
 
----
+**SCRIPT WALKTHROUGH #4**
 
 ![Cleaned script 4][cleaned-script-4]
 
 The function performs the following actions:
+
 1. Initiates multiple HTTP requests to different endpoints.
 2. Decodes the received payload using Base64 and XOR operations to extract the HTML content.
 
----
+**EMBEDDED SCRIPT WALKTHROUGH #1**
 
 ![Cleaned embedded script 1][cleaned-embedded-script-1]
 
 The function performs the following actions:
+
 1. Initiates multiple HTTP requests to different endpoints.
 2. Decodes the received response using Base64 encoding.
 
----
+**EMBEDDED SCRIPT WALKTHROUGH #2**
 
 ![Cleaned embedded script 2][cleaned-embedded-script-2]
 
 The function performs the following actions:
+
 1. Similar pattern of HTTP requests but uses different parameters.
-
----
-
-<br>
 
 ## QUESTION & ANSWER
 
@@ -143,12 +142,10 @@ The function performs the following actions:
 
 [lumma-ma]: /blog/2024-10-05-malware-analysis-lumma-stealer/
 [lumma-na]: /blog/2026-10-04-traffic-analysis-lumma-in-the-room-ah
-
 [top-conversation]: ../assets/img/nta/kongtuke/top-conversation.png
 [mac-address]: ../assets/img/nta/kongtuke/infected_system_mac.png
 [host-user-name]: ../assets/img/nta/kongtuke/infected_system_host_user_name.png
 [full-name]: ../assets/img/nta/kongtuke/infected_system_full_name.png
-
 [encrypted-communication]: ../assets/img/nta/kongtuke/encrypted-communication.png
 [injected-script]: ../assets/img/nta/kongtuke/injected-script.png
 [obfuscated-script]: ../assets/img/nta/kongtuke/obfuscated-script.png
