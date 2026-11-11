@@ -33,6 +33,7 @@ TOC
 Lazy-loaded images
 */
 
+article.blog-post img,
 img.mx-auto.d-block[loading="lazy"] {
   width: 100%;
   height: 100%;
