@@ -23,8 +23,6 @@ The characteristics of this environment are:
 - LAN segment gateway: 10.9.11\[.\]1
 - LAN segment broadcast address: 10.9.11\[.\]255
 
----
-
 ## METHODOLOGY
 
 The infection method is **ClickFix**, which uses a CAPTCHA-solving webpage to trick users into running a series of commands under the guise of completing CAPTCHA verification.
@@ -63,8 +61,6 @@ Subsequently, the hostname and username can be retrieved from Kerberos traffic.
 Finally, we retrieve the user's full name using the SAMR protocol.
 
 ![Full name][full-name]
-
----
 
 ## RABBIT HOLE
 
@@ -136,11 +132,8 @@ The function performs the following actions:
 
 1. Similar pattern of HTTP requests but uses different parameters.
 
----
-
 ## CHRONOLOGY
 
----
 
 ## QUESTION & ANSWER
 
