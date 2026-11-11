@@ -39,25 +39,12 @@ We hypothetically assume the system with IP 10.9.11\[.\]135 is infected. To conf
 | Domain                    | Reputation | Community |
 | ------------------------- | ---------- | --------- |
 | aatthews[.]cfd            | 19/92      | -60       |
-| firt[.]comonto-rsr[.]com  | 0/92       | 0         |
-| gets[.]bert-hits[.]com    | 0/92       | 0         |
-| globalcert8618[.]net      | 0/92       | 0         |
-| hostjob3862[.]net         | 0/92       | 0         |
 | hyko[.]fif-lost[.]com     | 1/92       | 0         |
-| jaw[.]xos-aploq[.]com     | 0/92       | 0         |
-| know[.]mom-nower[.]com    | 0/92       | 0         |
 | logincrypt8338[.]com      | 18/92      | -60       |
-| now[.]comonto-rsr[.]com   | 0/92       | 0         |
-| opsbox8097[.]com          | 0/92       | 0         |
 | opscast3707[.]net         | 1/92       | 0         |
 | quadcinema[.]com          | 0/92       | 0         |
-| second[.]bert-hits[.]com  | 0/92       | 0         |
-| soft[.]xos-aploq[.]com    | 0/92       | 0         |
-| start[.]comonto-rsr[.]com | 0/92       | 0         |
 | stream[.]fif-lost[.]com   | 1/92       | 0         |
 | winrun2915[.]com          | 6/92       | -11       |
-| bert-hits[.]com           | 0/92       | 0         |
-| xos-aploq[.]com           | 0/92       | 0         |
 
 We correlate DNS queries to identify potentially malicious connections. We then proceed to build a profile of the infected system.
 
