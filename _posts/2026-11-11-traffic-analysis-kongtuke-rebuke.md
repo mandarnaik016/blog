@@ -134,9 +134,7 @@ The function performs the following actions:
 
 <details markdown="1">
 <summary>Deobfuscated</summary>
-The cleaned files can be referenced below:
-1. [6oll0u79_clean.js][gist-1]
-2. [embedded_clean.js][gist-2]
+The cleaned files can be referenced [here][gist].
 </details>
 
 ## CHRONOLOGY
@@ -189,7 +187,7 @@ After verification, the server responds to this request as follows:
 ```json
 {
   "s": 1,
-  "h": "EQxpYm<REPLACED_FOR_BREVITY>WUBBEyc=",
+  "h": "<REPLACED_FOR_BREVITY>",
   "xk": 45,
   "ct": "f295473af067014ea9626ff357fe5067"
 }
@@ -247,8 +245,7 @@ Host: hodkiewhcz.sbs
 The embedded script initiates this request,
 
 ```javascript
-try {
-  // line 153
+try { // line 153
   var _kydlc = new Image();
   _kydlc.src = _vtljn + "/ci?v=20260911";
 } catch (e) {}
@@ -287,8 +284,7 @@ Due to the length of the analysis, we will continue exploring the remaining stag
 [cleaned-script-4]: ../assets/img/nta/kongtuke/cleaned-script-4.png
 [cleaned-embedded-script-1]: ../assets/img/nta/kongtuke/cleaned-embedded-script-1.png
 [cleaned-embedded-script-2]: ../assets/img/nta/kongtuke/cleaned-embedded-script-2.png
-[gist-1]: https://bit.ly/4z9VqCR
-[gist-2]: https://bit.ly/4BXuuc0
+[gist]: https://gist.github.com/mandarnaik016/d573ab57d5605673b44a064dcffd0a15
 [calculated-nonce]: ../assets/img/nta/kongtuke/calculated-nonce.png
 [decoded-html]: ../assets/img/nta/kongtuke/decoded-html.png
 [rendered-html]: ../assets/img/nta/kongtuke/rendered-html.png
