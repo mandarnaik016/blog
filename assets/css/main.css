@@ -44,6 +44,71 @@ img.mx-auto.d-block[loading="lazy"] {
 }
 
 /*
+Section
+*/
+
+article.blog-post h2 {
+  position: relative;
+  padding: 0.5em 0.7em 0.4em;
+  margin-top: 3rem;
+  margin-left: 0;
+  margin-bottom: 1em;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #404040, rgba(128, 128, 128, 0.15)) 1;
+  color: #404040;
+}
+
+article.blog-post h3 {
+  position: relative;
+  padding: 0em 0em 0.3em 0em;
+  margin-top: 3rem;
+  margin-left: 0;
+  margin-bottom: 1em;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #404040, rgba(128, 128, 128, 0.15)) 1;
+  color: #404040;
+}
+
+article.blog-post h4 {
+  position: relative;
+  padding: 0em 0em 0.3em 0em;
+  margin-top: 2rem;
+  margin-left: 0;
+  margin-bottom: 0.8em;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, #404040, rgba(128, 128, 128, 0.15)) 1;
+  color: #404040;
+}
+
+article.blog-post h2::before,
+article.blog-post h2::after,
+article.blog-post h3::before,
+article.blog-post h3::after,
+article.blog-post h4::before,
+article.blog-post h4::after {
+  position: absolute;
+  left: 30px;
+  bottom: -15px;
+  width: 30px;
+  height: 15px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  content: "";
+}
+
+article.blog-post h2::before,
+article.blog-post h3::before,
+article.blog-post h4::before {
+  background-color: #404040;
+}
+
+article.blog-post h2::after,
+article.blog-post h3::after,
+article.blog-post h4::after {
+  bottom: -11px;
+  background-color: #fff;
+}
+
+/*
 Spoiler
 */
 
