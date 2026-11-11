@@ -7,8 +7,8 @@ thumbnail-img: ""
 tags: [analysis, security, network]
 ---
 
-- TOC
-  {:toc}
+* TOC
+{:toc}
 
 ## BACKGROUND
 
@@ -22,6 +22,8 @@ The characteristics of this environment are:
 - Active Directory (AD) domain controller: 10.9.11\[.\]2 - WIN-GTWXC9UYSE4
 - LAN segment gateway: 10.9.11\[.\]1
 - LAN segment broadcast address: 10.9.11\[.\]255
+
+---
 
 ## METHODOLOGY
 
@@ -61,6 +63,8 @@ Subsequently, the hostname and username can be retrieved from Kerberos traffic.
 Finally, we retrieve the user's full name using the SAMR protocol.
 
 ![Full name][full-name]
+
+---
 
 ## RABBIT HOLE
 
@@ -131,6 +135,12 @@ The function performs the following actions:
 The function performs the following actions:
 
 1. Similar pattern of HTTP requests but uses different parameters.
+
+---
+
+## CHRONOLOGY
+
+---
 
 ## QUESTION & ANSWER
 
