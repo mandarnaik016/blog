@@ -34,7 +34,7 @@ In the initial triage, we note the top endpoints involved in conversions by numb
 
 ![Top conversation][top-conversation]
 
-We hypothetically assume the system with IP 10.9.11\[.\]135 is infected. To confirm the hypothesis, leverage DNS packets to extract and filter the domains for subsequent reputation analysis (VT).
+We hypothetically assume the system with IP `10.9.11[.]135` is infected. To confirm the hypothesis, leverage DNS packets to extract and filter the domains for subsequent reputation analysis (VT).
 
 | Domain                    | Reputation | Community |
 | ------------------------- | ---------- | --------- |
@@ -60,6 +60,60 @@ Finally, we retrieve the user's full name using the SAMR protocol.
 
 ![Full name][full-name]
 
+## RABBIT HOLE
+
+According to the briefing, the infection is delivered through a legitimate website, `quadcinema[.]com`, which contains an injected script. However, due to TLS encryption, we cannot inspect the packet contents.
+
+![Encrypted communication][encrypted-communication]
+
+We can continue the analysis using the available artifacts. We extract all URLs from the saved HTML response to identify any suspicious script injections.
+
+![Injected script][injected-script]
+
+The script, `hxxps[://]hodkiewhcz[.]sbs/6oll0u79[.]js`, is completely unrelated to the parent domain and is obfuscated.
+
+![Obfuscated script][obfuscated-script]
+
+Since the available tools are unable to deobfuscate the script, we proceed with manual deobfuscation.
+
+![Cleaned script 1][cleaned-script-1]
+
+The script performs the following actions:
+1. Retrieves its execution domain, i.e., `hodkiewhcz[.]sbs`, from the HTML document.
+2. Performs canvas fingerprinting to collect browser and system information.
+3. Creates a hidden iframe.
+
+![Cleaned script 2][cleaned-script-2]
+
+The script performs the following actions:
+1. Sends an HTTP GET request and processes the response.
+2. Creates a hidden iframe containing another embedded script.
+
+![Cleaned script 3][cleaned-script-3]
+
+The script performs the following actions:
+1. Copies the received command to the victim's clipboard.
+2. Sends an HTTP POST request and processes the response.
+
+![Cleaned script 4][cleaned-script-4]
+
+The script performs the following actions:
+1. Initiates multiple HTTP requests to different endpoints.
+2. Decodes the received payload using Base64 and XOR operations to extract the HTML content.
+
+
+![Cleaned embedded script 1][cleaned-embedded-script-1]
+
+The script performs the following actions:
+1. Initiates multiple HTTP requests to different endpoints.
+2. Decodes the received response using Base64 encoding.
+
+
+![Cleaned embedded script 2][cleaned-embedded-script-2]
+
+The script performs the following actions:
+1. Similar pattern of HTTP requests but uses different parameters.
+
 ## QUESTION & ANSWER
 
 1. What is the IP address of the infected Windows client? **10.9.11.135**
@@ -70,7 +124,18 @@ Finally, we retrieve the user's full name using the SAMR protocol.
 
 [lumma-ma]: /blog/2024-10-05-malware-analysis-lumma-stealer/
 [lumma-na]: /blog/2026-10-04-traffic-analysis-lumma-in-the-room-ah
+
 [top-conversation]: ../assets/img/nta/kongtuke/top-conversation.png
 [mac-address]: ../assets/img/nta/kongtuke/infected_system_mac.png
 [host-user-name]: ../assets/img/nta/kongtuke/infected_system_host_user_name.png
 [full-name]: ../assets/img/nta/kongtuke/infected_system_full_name.png
+
+[encrypted-communication]: ../assets/img/nta/kongtuke/encrypted-communication.png
+[injected-script]: ../assets/img/nta/kongtuke/injected-script.png
+[obfuscated-script]: ../assets/img/nta/kongtuke/obfuscated-script.png
+[cleaned-script-1]: ../assets/img/nta/kongtuke/cleaned-script-1.png
+[cleaned-script-2]: ../assets/img/nta/kongtuke/cleaned-script-2.png
+[cleaned-script-3]: ../assets/img/nta/kongtuke/cleaned-script-3.png
+[cleaned-script-4]: ../assets/img/nta/kongtuke/cleaned-script-4.png
+[cleaned-embedded-script-1]: ../assets/img/nta/kongtuke/cleaned-embedded-script-1.png
+[cleaned-embedded-script-2]: ../assets/img/nta/kongtuke/cleaned-embedded-script-2.png
