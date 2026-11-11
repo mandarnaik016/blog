@@ -10,6 +10,7 @@ tags: [analysis, security, network]
 * TOC
 {:toc}
 
+
 ## BACKGROUND
 
 I investigated recent Kongtuke ClickFix activity using a domain-joined host in an Active Directory environment.
@@ -21,6 +22,8 @@ The characteristics of this environment are:
 - Active Directory (AD) domain controller: 10.9.11\[.\]2 - WIN-GTWXC9UYSE4
 - LAN segment gateway: 10.9.11\[.\]1
 - LAN segment broadcast address: 10.9.11\[.\]255
+
+<br>
 
 ## METHODOLOGY
 
@@ -60,6 +63,8 @@ Finally, we retrieve the user's full name using the SAMR protocol.
 
 ![Full name][full-name]
 
+<br>
+
 ## RABBIT HOLE
 
 According to the briefing, the infection is delivered through a legitimate website, `quadcinema[.]com`, which contains an injected script. However, due to TLS encryption, we cannot inspect the packet contents.
@@ -76,43 +81,57 @@ The script, `hxxps[://]hodkiewhcz[.]sbs/6oll0u79[.]js`, is completely unrelated 
 
 Since the available tools are unable to deobfuscate the script, we proceed with manual deobfuscation.
 
+---
+
 ![Cleaned script 1][cleaned-script-1]
 
-The script performs the following actions:
+The function performs the following actions:
 1. Retrieves its execution domain, i.e., `hodkiewhcz[.]sbs`, from the HTML document.
 2. Performs canvas fingerprinting to collect browser and system information.
 3. Creates a hidden iframe.
 
+---
+
 ![Cleaned script 2][cleaned-script-2]
 
-The script performs the following actions:
+The function performs the following actions:
 1. Sends an HTTP GET request and processes the response.
 2. Creates a hidden iframe containing another embedded script.
 
+---
+
 ![Cleaned script 3][cleaned-script-3]
 
-The script performs the following actions:
+The function performs the following actions:
 1. Copies the received command to the victim's clipboard.
 2. Sends an HTTP POST request and processes the response.
 
+---
+
 ![Cleaned script 4][cleaned-script-4]
 
-The script performs the following actions:
+The function performs the following actions:
 1. Initiates multiple HTTP requests to different endpoints.
 2. Decodes the received payload using Base64 and XOR operations to extract the HTML content.
 
+---
 
 ![Cleaned embedded script 1][cleaned-embedded-script-1]
 
-The script performs the following actions:
+The function performs the following actions:
 1. Initiates multiple HTTP requests to different endpoints.
 2. Decodes the received response using Base64 encoding.
 
+---
 
 ![Cleaned embedded script 2][cleaned-embedded-script-2]
 
-The script performs the following actions:
+The function performs the following actions:
 1. Similar pattern of HTTP requests but uses different parameters.
+
+---
+
+<br>
 
 ## QUESTION & ANSWER
 
