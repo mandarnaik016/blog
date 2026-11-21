@@ -32,7 +32,7 @@ tag: str = args["tag"]
 
 Since XSOAR allows us to group multiple clauses within a single field, for example, `value:("1.1.1.1" "8.8.8.8")`, we can search for all the IOCs in a single query, as shown below.
 
-![Single search](../assets/img/cortex/single-search.png)
+![Single search](../assets/img/cortex/search-query/single-search.png)
 
 However, this approach works well when the number of indicators ranges from 0 to 100. Once the volume exceeds that range, it is no longer an efficient or practical approach. 
 
@@ -89,11 +89,11 @@ The concept is quite simple: less data means less computation and processing, re
 
 The response contains the output length of **50035** when the `populateFields` argument in `searchIndicators()` is not set.
 
-![Default retrival](../assets/img/cortex/default-retrival.png)
+![Default retrival](../assets/img/cortex/search-query/default-retrival.png)
 
 The response is almost halved when we selectively retrieve only the `value` field. This reduces the output length to **23035**, eliminating unnecessary data.
 
-![Selective retrival](../assets/img/cortex/selective-retrival.png)
+![Selective retrival](../assets/img/cortex/search-query/selective-retrival.png)
 
 In addition to selective field retrieval, we also limit the size in `searchIndicators()` to the length of the current chunk.
 
@@ -117,6 +117,6 @@ For a sample ~3000 indicators, around 100 of which are already tagged.
 
 As expected, the script populated the output with only unblocked indicators, excluding those that were already tagged as `blocked`. The complete script can be found at [FindUntagged](https://gist.github.com/mandarnaik016/ac365583d1e9a8f42ce56332fdc914c6#file-finduntagged-py)
 
-![Result](../assets/img/cortex/result-warroom.png)
+![Result](../assets/img/cortex/search-query/result-warroom.png)
 
 Thank you for making it this far! See you next time. Until then, sayonara!
